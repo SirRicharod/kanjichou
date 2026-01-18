@@ -1,0 +1,53 @@
+.navbar {
+    background-color: var(--bg-secondary);
+}
+
+.navbar-brand {
+    color: var(--accent-gold);
+    font-weight: 700;
+}
+
+.nav-link,
+.nav-link:focus,
+.nav-link.show {
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-info) !important;
+    text-decoration: underline;
+}
+
+.disabled {
+    color: var(--bg-primary);
+}
+
+.dropdown-menu {
+    background: var(--bg-secondary);
+}
+
+.dropdown-item {
+    color: var(--accent-info);
+    background-color: transparent m !important;
+}
+
+.dropdown-item:hover {
+    background-color: var(--bg-surface);
+}
+
+.input-group-text {
+    background-color: var(--bg-secondary);
+    color: var(--text-main);
+}
+
+.form-control {
+    background-color: var(--bg-surface);
+    color: var(--text-main);
+}
+
+.form-control::placeholder {
+    font-style: italic;
+    color: var(--text-muted);
+}

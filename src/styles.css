@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    /* Backgrounds & Canvas */
+    --bg-primary: #1a1b26;     /* Deep Night Indigo - easy on the eyes */
+    --bg-secondary: #24283b;   /* Slightly lighter for cards/containers */
+    --bg-tertiary: #2f334d;    /* Hover states or inset elements */
+    --bg-surface: #3b4261;     /* For lifted cards or active states */
+
+    /* Primary Branding (The "Kanjicho" Identity) */
+    --accent-gold: #e0af68;    /* Soft gold - used for the "Collected" state */
+    --accent-sage: #9ece6a;    /* Muted green - used for "New" or success */
+    --accent-ink: #bb9af7;     /* Muted violet - used for grammar/links */
+    --accent-error: #f7768e;   /* For incorrect answers */
+    --accent-info: #7aa2f7;    /* For primary buttons/active UI */
+
+    /* Text & Typography */
+    --text-main: #c0caf5;      /* Off-white blue - high readability, low strain */
+    --text-muted: #9aa5ce;     /* Higher contrast for secondary info/footer */
+    --text-header: #ffffff;    /* Pure white for the big Kanji display */
+
+    /* UI Elements */
+    --border-color: #414868;   /* Subtle borders for cards */
+    --overlay: rgba(0, 0, 0, 0.4);
+
+    /* Status Colors */
+    --status-unseen: #565f89;       /* Gray-blue for kanji you haven't "caught" */
+    --status-collected: var(--accent-gold);
+
+    /* Utility Shadow */
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
