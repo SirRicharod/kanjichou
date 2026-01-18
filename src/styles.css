@@ -1,4 +1,9 @@
 :root {
+    /* Font Stacks */
+    --font-kanji: "Noto Serif JP", serif;
+    --font-ui: "Noto Sans JP", sans-serif;
+    --font-mono: ui-monospace, "JetBrains Mono", monospace;
+
     /* Backgrounds & Canvas */
     --bg-primary: #1a1b26;     /* Deep Night Indigo - easy on the eyes */
     --bg-secondary: #24283b;   /* Slightly lighter for cards/containers */
