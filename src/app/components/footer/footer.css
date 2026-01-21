@@ -1,6 +1,10 @@
 footer {
     background-color: var(--bg-secondary);
     color: var(--text-muted);
+    font-family: var(font-ui);
+
+    position: sticky;
+    bottom: 0;
 }
 
 a {

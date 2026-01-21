@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "kanjicho": {
+    "kanjichou": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -61,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "kanjicho:build:production"
+              "buildTarget": "kanjichou:build:production"
             },
             "development": {
-              "buildTarget": "kanjicho:build:development"
+              "buildTarget": "kanjichou:build:development"
             }
           },
           "defaultConfiguration": "development"
