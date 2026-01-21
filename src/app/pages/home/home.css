@@ -4,8 +4,31 @@
 }
 
 .content {
-    margin-left: auto;
-    margin-right: auto;
-
+    width: 80%;
     color: var(--text-main);
+}
+
+hr {
+    margin: 30px 0;
+    border: 1px solid var(--accent-ink);
+}
+
+a {
+    color: var(--accent-info);
+}
+
+ul {
+    list-style-type: circle;
+}
+
+li {
+    padding-top: 5px;
+}
+
+
+.kanji {
+    font-size: 16px;
+    color: var(--accent-ink);
+    font-family: var(--font-kanji);
+
 }
