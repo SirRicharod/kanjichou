@@ -114,3 +114,7 @@
     color: var(--text-muted);
     font-size: 1.5rem;
 }
+
+ul li{
+padding-left: 15px;
+}
