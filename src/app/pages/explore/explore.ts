@@ -2,10 +2,12 @@ import { Component, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Kanjiapi } from '../../services/kanjiapi';
 import { OnInit } from '@angular/core';
+import { Kanjigrid } from '../../components/kanjigrid/kanjigrid';
+import { Sidepanel } from '../../components/sidepanel/sidepanel';
 
 @Component({
   selector: 'app-explore',
-  imports: [],
+  imports: [Kanjigrid, Sidepanel],
   templateUrl: './explore.html',
   styleUrl: './explore.css',
 })
@@ -26,7 +28,6 @@ export class Explore implements OnInit {
         this.kanjiService.getKanjiByCollection(collection).subscribe({
           next: (data) => {
             this.kanjiList.set(data); // Store the array in your signal
-            console.log('Successfully fetched kanji:', data);
           },
           error: (err) => {
             console.error('Error fetching kanji:', err);

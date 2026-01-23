@@ -1,1 +1,9 @@
-<p>explore works!</p>
+<div class="explore-container">
+  <aside class="side-panel-wrapper">
+    <app-sidepanel></app-sidepanel>
+  </aside>
+
+  <main class="grid-area">
+    <app-kanjigrid [kanjis]="kanjiList()"></app-kanjigrid>
+  </main>
+</div>
