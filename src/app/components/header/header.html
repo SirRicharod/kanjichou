@@ -1,50 +1,52 @@
 <nav class="navbar p-lg-3 navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">漢字帳</a>
+        <a class="navbar-brand" href="a#">漢字帳</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-list"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle navbar-link" href="#" role="button" data-bs-toggle="dropdown"
+                <li class="nav-item dropdown ps-lg-5">
+                    <button class="nav-link dropdown-toggle navbar-link" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Kanji Lists
-                    </a>
+                    </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">kyouiku <span class="kanji">(教育漢字)</span></a></li>
-                        <li><a class="dropdown-item" href="#">Jouyou <span class="kanji">(常用漢字)</span></a></li>
-                        <li><a class="dropdown-item" href="#">Jinmeiyou <span class="kanji">(人名用漢字)</span></a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/explore', 'kyouiku']">kyouiku <span
+                                    class="kanji">(教育漢字)</span></a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/explore', 'jouyou']">jouyou <span
+                                    class="kanji">(常用漢字)</span></a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/explore', 'jinmeiyou']">jinmeiyou <span
+                                    class="kanji">(人名用漢字)</span></a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle navbar-link" href="#" role="button" data-bs-toggle="dropdown"
+                <li class="nav-item dropdown ps-lg-5">
+                    <button class="nav-link dropdown-toggle navbar-link" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         JLPT
-                    </a>
+                    </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">N1</a></li>
-                        <li><a class="dropdown-item" href="#">N2</a></li>
-                        <li><a class="dropdown-item" href="#">N3</a></li>
-                        <li><a class="dropdown-item" href="#">N4</a></li>
-                        <li><a class="dropdown-item" href="#">N5</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/explore', 'jlpt-1']">N1</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/explore', 'jlpt-2']">N2</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/explore', 'jlpt-3']">N3</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/explore', 'jlpt-4']">N4</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/explore', 'jlpt-5']">N5</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle navbar-link" href="#" role="button" data-bs-toggle="dropdown"
+                <li class="nav-item dropdown ps-lg-5">
+                    <button class="nav-link dropdown-toggle navbar-link" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Grades
-                    </a>
+                    </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Grade 1</a></li>
-                        <li><a class="dropdown-item" href="#">Grade 2</a></li>
-                        <li><a class="dropdown-item" href="#">Grade 3</a></li>
-                        <li><a class="dropdown-item" href="#">Grade 4</a></li>
-                        <li><a class="dropdown-item" href="#">Grade 5</a></li>
-                        <li><a class="dropdown-item" href="#">Grade 6</a></li>
-                        <li><a class="dropdown-item" href="#">Grade 8</a></li>
-
+                        <li><a class="dropdown-item" [routerLink]="['/explore', 'grade-1']">Grade 1</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/explore', 'grade-2']">Grade 2</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/explore', 'grade-3']">Grade 3</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/explore', 'grade-4']">Grade 4</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/explore', 'grade-5']">Grade 5</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/explore', 'grade-6']">Grade 6</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/explore', 'grade-8']">Grade 8</a></li>
                     </ul>
                 </li>
             </ul>
