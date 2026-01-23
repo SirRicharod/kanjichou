@@ -1,1 +1,5 @@
-<p>kanjigrid works!</p>
+<div class="grid">
+    @for (kanji of kanjis; track kanji || $index) {
+        <app-kanjicard [character]="kanji"></app-kanjicard>
+    }
+</div>

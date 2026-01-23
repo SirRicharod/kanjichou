@@ -7,5 +7,5 @@ import { Component, input, Input } from '@angular/core';
   styleUrl: './kanjicard.css',
 })
 export class Kanjicard {
-  @Input() kanji :string = '';
+  @Input() character :string = '';
 }
