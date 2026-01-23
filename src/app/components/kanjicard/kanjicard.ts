@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 
 @Component({
   selector: 'app-kanjicard',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './kanjicard.css',
 })
 export class Kanjicard {
-
+  @Input() kanji :string = '';
 }

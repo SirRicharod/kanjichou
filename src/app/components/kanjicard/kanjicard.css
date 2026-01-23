@@ -1,0 +1,9 @@
+.kanji-card {
+    padding: 1px;
+    border: 1px solid var(--accent-ink);
+    background: var(--bg-secondary);
+}
+
+.character {
+    font-family: var(--font-kanji);
+}
