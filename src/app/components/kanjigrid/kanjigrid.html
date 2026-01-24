@@ -1,5 +1,5 @@
 <div class="grid">
     @for (kanji of kanjis; track kanji || $index) {
-        <app-kanjicard [character]="kanji"></app-kanjicard>
+        <app-kanjicard [character]="kanji" (cardClicked)="relaySelection($event)"></app-kanjicard>
     }
 </div>

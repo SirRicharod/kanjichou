@@ -1,4 +1,4 @@
-import { Component, input, Input } from '@angular/core';
+import { Component, input, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-kanjicard',
@@ -8,4 +8,10 @@ import { Component, input, Input } from '@angular/core';
 })
 export class Kanjicard {
   @Input() character :string = '';
+  @Output() cardClicked = new EventEmitter<string>();
+  
+  onCardClick() {
+    this.cardClicked.emit(this.character);
+    console.log("Card Clicked");
+  }
 }

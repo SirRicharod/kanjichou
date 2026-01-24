@@ -1,9 +1,9 @@
 <div class="explore-container">
   <aside class="side-panel-wrapper">
-    <app-sidepanel></app-sidepanel>
+    <app-sidepanel [activeKanji]="selectedKanji()"></app-sidepanel>
   </aside>
 
   <main class="grid-area">
-    <app-kanjigrid [kanjis]="kanjiList()"></app-kanjigrid>
+    <app-kanjigrid [kanjis]="kanjiList()" (kanjiSelected)="handleKanjiSelection($event)"></app-kanjigrid>
   </main>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sidepanel',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './sidepanel.css',
 })
 export class Sidepanel {
+@Input() activeKanji :string | null = null;
 
 }

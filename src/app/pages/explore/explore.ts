@@ -14,6 +14,12 @@ import { Sidepanel } from '../../components/sidepanel/sidepanel';
 
 export class Explore implements OnInit {
   kanjiList = signal<string[]>([]);
+  selectedKanji = signal<string | null>(null);
+
+  handleKanjiSelection(character :string) {
+    this.selectedKanji.set(character);
+    console.log("Explore Received");
+  }
 
   constructor(
     private route: ActivatedRoute,

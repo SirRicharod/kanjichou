@@ -1,8 +1,17 @@
 .kanji-card {
-    padding: 5px;
+    padding: 5px 10px;
     margin: 1px;
     border: 1px solid var(--accent-ink);
     background: var(--bg-secondary);
+    user-select: none;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.kanji-card:hover {
+    box-shadow: 0 0 10px var(--accent-ink);
+    background: var(--bg-primary);
+    cursor: pointer;
 }
 
 .character {
