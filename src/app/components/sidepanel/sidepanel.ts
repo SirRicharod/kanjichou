@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { KanjiDetail } from '../../services/kanjiapi';
 
 @Component({
   selector: 'app-sidepanel',
@@ -7,6 +8,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './sidepanel.css',
 })
 export class Sidepanel {
-@Input() activeKanji :string | null = null;
+@Input() activeKanji :KanjiDetail | null = null;
 
 }

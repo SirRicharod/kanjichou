@@ -1,5 +1,40 @@
-@if (activeKanji){
-    <h1>{{ activeKanji }}</h1>
+@if (activeKanji) {
+<div class="side-panel-content">
+    <h1>{{ activeKanji.kanji }}</h1>
+
+    <div class="stats-grid">
+        <p><span class="section-title">JLPT</span> {{ activeKanji.jlpt ?? 'N/A'}}</p>
+        <p><span class="section-title">Grade</span> {{ activeKanji.grade ?? 'N/A'}}</p>
+    </div>
+
+    <span class="section-title">Onyomi</span>
+    <div class="chip-container">
+        @for (on of activeKanji.on_readings; track on) {
+        <span class="chip onyomi">{{ on }}</span>
+        }
+    </div>
+
+    <span class="section-title">Kunyomi</span>
+    <div class="chip-container">
+        @for (kun of activeKanji.kun_readings; track kun) {
+        <span class="chip kunyomi">{{ kun }}</span>
+        }
+    </div>
+
+    <span class="section-title">Meanings</span>
+    <div class="chip-container">
+        @for (m of activeKanji.meanings; track m) {
+        <span class="chip meaning">{{ m }}</span>
+        }
+    </div>
+
+    <span class="section-title">Name Readings</span>
+    <div class="chip-container">
+        @for (nd of activeKanji.name_readings; track nd) {
+        <span class="chip meaning">{{ nd }}</span>
+        }
+    </div>
+</div>
 } @else {
-    <p>Please select a kanji</p>
+<div class="placeholder">Select a kanji to view details</div>
 }
