@@ -17,7 +17,6 @@ export class Kanjigrid {
     // This function catches the card's message and sends it higher
     relaySelection(character :string) {
       this.kanjiSelected.emit(character);
-      console.log("Grid Sent");
     }
 
 }

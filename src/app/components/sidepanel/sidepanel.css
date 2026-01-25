@@ -1,3 +1,45 @@
-p, h1 {
+.side-panel-content {
     color: white;
+
+}
+
+.stats-grid {
+    color: white;
+
+}
+
+.section-title {
+    color: white;
+    
+}
+
+.chip-container {
+    color: white;
+
+}
+
+.chip {
+    color: white;
+
+}
+
+.onyomi {
+    color: white;
+
+
+}
+
+.kunyomi {
+    color: white;
+
+}
+
+.meaning {
+    color: white;
+
+}
+
+.unselected {
+    color: white;
+
 }

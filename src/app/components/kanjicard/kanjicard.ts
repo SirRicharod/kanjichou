@@ -12,6 +12,5 @@ export class Kanjicard {
   
   onCardClick() {
     this.cardClicked.emit(this.character);
-    console.log("Card Clicked");
   }
 }
