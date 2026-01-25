@@ -46,7 +46,7 @@ export class Explore implements OnInit {
       if (collection) {
         this.kanjiService.getKanjiByCollection(collection).subscribe({
           next: (data) => {
-            this.kanjiList.set(data); // Store the array in your signal
+            this.kanjiList.set(data); // Store the array in a signal
           },
           error: (err) => {
             console.error('Error fetching kanji:', err);

@@ -1,43 +1,51 @@
 @if (activeKanji) {
 <div class="side-panel-content">
-    <h1>{{ activeKanji.kanji }}</h1>
+    <span class="kanji-title">{{ activeKanji.kanji }}</span>
 
-    <div class="stats-grid">
-        <p><span class="section-title">JLPT</span> {{ activeKanji.jlpt ?? 'N/A'}}</p>
-        <p><span class="section-title">Grade</span> {{ activeKanji.grade ?? 'N/A'}}</p>
+    <div class="section">
+        <span class="section-title">JLPT {{ activeKanji.jlpt ?? 'N/A'}}</span>
+        <span class="section-title">Grade {{ activeKanji.grade ?? 'N/A'}}</span>
     </div>
-
-    @if (activeKanji.on_readings && activeKanji.on_readings.length > 0) {
-    <span class="section-title">Onyomi</span>
-    <div class="chip-container">
-        @for (on of activeKanji.on_readings; track on) {
-        <span class="chip onyomi">{{ on }}</span><br>
-        }
-    </div>
-    }
 
     @if (activeKanji.kun_readings && activeKanji.kun_readings.length > 0) {
-    <span class="section-title">Kunyomi</span>
-    <div class="chip-container">
-        @for (kun of activeKanji.kun_readings; track kun) {
-        <span class="chip kunyomi">{{ kun }}</span><br>
-        }
+    <div class="section">
+        <span class="section-title">Kunyomi</span>
+        <div class="chip-container">
+            @for (kun of activeKanji.kun_readings; track kun) {
+            <span class="chip kanji">{{ kun }}</span><br>
+            }
+        </div>
     </div>
     }
 
-    <span class="section-title">Meanings</span>
-    <div class="chip-container">
-        @for (m of activeKanji.meanings; track m) {
-        <span class="chip meaning">{{ m }}</span><br>
-        }
+    @if (activeKanji.on_readings && activeKanji.on_readings.length > 0) {
+    <div class="section">
+        <span class="section-title">Onyomi</span>
+        <div class="chip-container">
+            @for (on of activeKanji.on_readings; track on) {
+            <span class="chip kanji">{{ on }}</span><br>
+            }
+        </div>
+    </div>
+    }
+
+    <div class="section">
+        <span class="section-title">Meanings</span>
+        <div class="chip-container">
+            @for (m of activeKanji.meanings; track m) {
+            <span class="chip meaning">{{ m }}</span><br>
+            }
+        </div>
     </div>
 
     @if (activeKanji.name_readings && activeKanji.name_readings.length > 0) {
-    <span class="section-title">Name Readings</span>
-    <div class="chip-container">
-        @for (nd of activeKanji.name_readings; track nd) {
-        <span class="chip meaning">{{ nd }}</span><br>
-        }
+    <div class="section">
+        <span class="section-title">Name Readings</span>
+        <div class="chip-container">
+            @for (nd of activeKanji.name_readings; track nd) {
+            <span class="chip kanji">{{ nd }}</span><br>
+            }
+        </div>
     </div>
     }
 </div>
