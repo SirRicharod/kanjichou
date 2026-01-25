@@ -1,20 +1,26 @@
 .explore-container {
-  display: flex; /* Aligns side-panel and grid side-by-side */
+  display: flex;
   width: 100%;
-  min-height: 100vh;
-  background-color: #1a1b26; /* Tokyo Night Background */
+  background-color: var(--bg-primary);
 }
 
 .side-panel-wrapper {
-  width: 250px; /* Fixed width for your navigation/filters */
-  border-right: 1px solid #414868; /* Subtle separator */
-  position: sticky; /* Keeps it visible while scrolling the grid */
-  top: 0;
+  width: 250px;
+  border-right: 2px solid var(--border-color);
+  position: sticky;
+  top: var(--navbar-height);
   height: 100vh;
+  overflow-y: auto;
 }
 
 .grid-area {
-  flex: 1; /* Takes up all remaining horizontal space */
+  flex: 1;
   padding: 20px;
-  overflow-y: auto; /* Allows the grid to scroll independently */
+}
+
+.collection {
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 1.5rem;
+  color: var(--text-muted);
 }

@@ -16,6 +16,7 @@ export class Explore implements OnInit {
   kanjiList = signal<string[]>([]);
   selectedKanji = signal<string | null>(null);
   kanjiDetails = signal<KanjiDetail | null>(null);
+  collection = signal<string| null>(null);
 
   handleKanjiSelection(character :string) {
     // Set the selected kanji
@@ -42,7 +43,8 @@ export class Explore implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       const collection = params['collection']; // This gets 'jlpt-1', 'joyo', etc.
-
+      this.collection.set(collection);
+      
       if (collection) {
         this.kanjiService.getKanjiByCollection(collection).subscribe({
           next: (data) => {

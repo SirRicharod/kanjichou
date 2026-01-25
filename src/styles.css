@@ -44,8 +44,8 @@
     /* Gray-blue for kanji you haven't "caught" */
     --status-collected: var(--accent-gold);
 
-    /* Utility Shadow */
-    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --navbar-height: 65px;
+
 }
 
 body {

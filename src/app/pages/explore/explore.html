@@ -4,6 +4,7 @@
   </aside>
 
   <main class="grid-area">
+    <div class="collection">{{collection()?.toLocaleUpperCase()}}</div>
     <app-kanjigrid [kanjis]="kanjiList()" (kanjiSelected)="handleKanjiSelection($event)"></app-kanjigrid>
   </main>
 </div>
