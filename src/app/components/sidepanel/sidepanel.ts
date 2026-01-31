@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { KanjiDetail } from '../../services/kanjiapi';
+import { Progressservice } from '../../services/progress';
 
 @Component({
   selector: 'app-sidepanel',
@@ -8,6 +9,13 @@ import { KanjiDetail } from '../../services/kanjiapi';
   styleUrl: './sidepanel.css',
 })
 export class Sidepanel {
-@Input() activeKanji :KanjiDetail | null = null;
+  @Input() activeKanji: KanjiDetail | null = null;
 
+  public progressService = inject(Progressservice);
+  
+  ToggleLearned() {
+    const kanji = this.activeKanji?.kanji;
+    if (!kanji) return;
+    this.progressService.ToggleKanji(kanji);
+  }
 }

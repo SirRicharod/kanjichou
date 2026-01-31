@@ -1,6 +1,6 @@
 @if (activeKanji) {
 <div class="side-panel-content">
-    <span class="kanji-title">{{ activeKanji.kanji }}</span>
+    <span class="title" [class]="progressService.learnedKanji().has(activeKanji.kanji) ? 'learned' : 'unlearned'" (click)="ToggleLearned()">{{ activeKanji.kanji }}</span>
 
     <div class="section">
         <span class="section-title">JLPT {{ activeKanji.jlpt ?? 'N/A'}}</span>

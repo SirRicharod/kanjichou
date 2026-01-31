@@ -1,3 +1,5 @@
-<div class="kanji-card" (click)="onCardClick()">
+<div [class]="progressService.learnedKanji().has(character) ? 'is-learned' : 'kanji-card'"
+(click)="onCardClick()"
+(dblclick)="progressService.ToggleKanji(character)">
   <span class="character">{{ character }}</span>
 </div>

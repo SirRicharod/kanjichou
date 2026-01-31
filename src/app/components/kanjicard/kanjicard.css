@@ -3,6 +3,7 @@
     margin: 1px;
     border: 1px solid var(--accent-ink);
     background: var(--bg-secondary);
+    color: var(--text-main);
     user-select: none;
 
     transition: all 0.2s ease-in-out;
@@ -14,8 +15,22 @@
     cursor: pointer;
 }
 
+.is-learned {
+    padding: 5px 10px;
+    margin: 1px;
+    border: 1px solid var(--bg-primary);
+    background: var(--accent-gold);
+    color: var(--bg-primary);
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.is-learned:hover {
+    box-shadow: 0 0 10px var(--accent-sage);
+    cursor: pointer;
+}
+
 .character {
     font-family: var(--font-kanji);
     font-size: 20px;
-    color: var(--text-main);
 }

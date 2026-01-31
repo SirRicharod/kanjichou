@@ -9,8 +9,31 @@
   border-right: 2px solid var(--border-color);
   position: sticky;
   top: var(--navbar-height);
-  height: 100vh;
+  height: calc(100vh - var(--navbar-height));
   overflow-y: auto;
+  padding-bottom: 1rem;
+}
+
+.side-panel-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.side-panel-wrapper::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+.side-panel-wrapper::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.side-panel-wrapper::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+.side-panel-wrapper {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) var(--bg-primary);
 }
 
 .grid-area {

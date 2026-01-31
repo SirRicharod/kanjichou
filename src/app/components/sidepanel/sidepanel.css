@@ -1,16 +1,28 @@
 .side-panel-content {
-    color: white;
+    color: whitesmoke;
     display: flex;
     flex-direction: column;
     margin: 0 1rem;
     gap: 10px;
 }
 
-.kanji-title {
+.title {
     font-size: 4rem;
     font-family: var(--font-kanji);
     text-align: center;
     margin-top: 10px;
+}
+
+.title:hover {
+    cursor:pointer;
+}
+
+.unlearned {
+    color: white;
+}
+
+.learned {
+    color: var(--accent-gold);
 }
 
 .section {
@@ -54,7 +66,6 @@
 }
 
 .unselected {
-    width: 100%;
     color: var(--accent-ink);
     font-style: italic;
     text-align: center;
