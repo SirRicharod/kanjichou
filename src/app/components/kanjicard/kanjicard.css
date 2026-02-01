@@ -1,12 +1,18 @@
-.kanji-card {
+.kanji-card,
+.is-learned {
     padding: 5px 10px;
     margin: 1px;
+    opacity: 0;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+    animation: fadeIn 0.2s ease-out forwards;
+    animation-delay: calc(var(--card-index) * 0.005s);
+}
+
+.kanji-card {
     border: 1px solid var(--accent-ink);
     background: var(--bg-secondary);
     color: var(--text-main);
-    user-select: none;
-
-    transition: all 0.2s ease-in-out;
 }
 
 .kanji-card:hover {
@@ -16,13 +22,9 @@
 }
 
 .is-learned {
-    padding: 5px 10px;
-    margin: 1px;
     border: 1px solid var(--bg-primary);
     background: var(--accent-gold);
     color: var(--bg-primary);
-    user-select: none;
-    transition: all 0.2s ease-in-out;
 }
 
 .is-learned:hover {
@@ -33,4 +35,16 @@
 .character {
     font-family: var(--font-kanji);
     font-size: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
